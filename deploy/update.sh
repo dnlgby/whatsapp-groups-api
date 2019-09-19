@@ -2,7 +2,7 @@
 
 set -e
 
-PROJECT_MANAGE_PATH='/usr/local/apps/whatsapp_groups_api/app'
+PROJECT_MANAGE_PATH='/usr/local/apps/whatsapp-groups-api/app'
 
 git pull
 $PROJECT_MANAGE_PATH/env/bin/python manage.py migrate
