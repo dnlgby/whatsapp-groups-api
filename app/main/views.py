@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from main import serializers
+
+class WhatsappGroupsView(generics.ListCreateAPIView):
+    """Create and list whatsapp groups"""
+
+    serializer_class = serializers.WhatsappGroupSerializer
