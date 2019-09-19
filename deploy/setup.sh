@@ -32,16 +32,16 @@ $PROJECT_MANAGE_PATH/env/bin/python manage.py collectstatic --noinput
 
 # Configure supervisor
 echo "Setting supervisor..."
-cp $PROJECT_BASE_PATH/deploy/supervisor_app_api.conf /etc/supervisor/conf.d/app_api.conf
+cp $PROJECT_BASE_PATH/deploy/supervisor_app.conf /etc/supervisor/conf.d/app.conf
 supervisorctl reread
 supervisorctl update
 supervisorctl restart app
 
 # Configure nginx
 echo "Setting nginx..."
-cp $PROJECT_BASE_PATH/deploy/nginx_app_api.conf /etc/nginx/sites-available/app_api.conf
+cp $PROJECT_BASE_PATH/deploy/nginx_app.conf /etc/nginx/sites-available/app.conf
 # rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/app_api.conf /etc/nginx/sites-enabled/app_api.conf
+ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/app.conf
 systemctl restart nginx.service
 
 echo "DONE! :)"
