@@ -121,3 +121,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Is the location where django will store all of the static files when we run the collect static command.
+#You can see that on the setup script - collectstatic.
+#Here we tel django where to store these files.
+STATIC_ROOT = 'static/'
