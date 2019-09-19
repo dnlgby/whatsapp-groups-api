@@ -5,8 +5,8 @@ set -e
 # TODO: Set to URL of git repo.
 PROJECT_GIT_URL='https://github.com/dnlgby/whatsapp_groups_api.git'
 
-PROJECT_BASE_PATH='/usr/local/apps/whatsapp-groups-api'
-PROJECT_MANAGE_PATH='/usr/local/apps/whatsapp-groups-api/app'
+PROJECT_BASE_PATH='/usr/local/apps/whatsapp_groups_api'
+PROJECT_MANAGE_PATH='/usr/local/apps/whatsapp_groups_api/app'
 
 
 echo "Installing dependencies..."
