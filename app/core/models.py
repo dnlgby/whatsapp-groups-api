@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class WhatsappGroup(models.Model):
     """The Whatsapp group model"""
 

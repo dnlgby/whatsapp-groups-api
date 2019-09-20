@@ -2,6 +2,7 @@ from rest_framework import serializers
 
 from core.models import WhatsappGroup, Tag
 
+
 class WhatsappGroupSerializer(serializers.ModelSerializer):
     """Serializer for WhatsappGroup objects"""
 
@@ -13,7 +14,6 @@ class WhatsappGroupSerializer(serializers.ModelSerializer):
 
 class TagSerializer(serializers.ModelSerializer):
     """Serializer for tag objects"""
-
 
     class Meta:
         model = Tag

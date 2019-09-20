@@ -7,7 +7,7 @@ app_name = 'main'
 
 
 router = DefaultRouter()
-router.register('groups', views.WhatsappGroupsViewSet)
+router.register('groups', views.WhatsappGroupViewSet)
 router.register('tags', views.TagViewSet)
 
 

@@ -7,7 +7,7 @@ class ModelTests(TestCase):
     """Class containing tests for the core app models"""
 
     def test_whatsappgroup_string_representation(self):
-        """Test the whatsappgroup string representation"""
+        """Test the WhatsappGroup model string representation"""
 
         whatsappgroup = models.WhatsappGroup.objects.create(
             name="Group_1",
@@ -15,4 +15,13 @@ class ModelTests(TestCase):
             invite_link="Group_1 Invite link"
         )
 
-        assertEqual(str(whatsappgroup), whatsappgroup.name)
+        self.assertEqual(str(whatsappgroup), whatsappgroup.name)
+
+    def test_tag_string_representation(self):
+        """Test the Tag model string representation"""
+
+        tag = models.Tag.objects.create(
+            name="Tag_1"
+        )
+
+        self.assertEqual(str(tag), tag.name)
