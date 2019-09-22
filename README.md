@@ -1,2 +1,5 @@
-# Whatsapp Groups API source code
-Whatsapp Groups API source code
+# Django REST Framework - Whatsapp Groups API source code (API for Kotlin_Demo_2)
+  * Two end points:
+    1. WhatsappGroups - created whatsapp groups list - (List, Add, Update, Delete)
+    2. Tags - Closed list of tags created.
+  * Developed using TDD - few tests inside.
