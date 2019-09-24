@@ -11,7 +11,7 @@ class WhatsappGroupViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.WhatsappGroupSerializer
     pagination_class = PageNumberPagination
     queryset = WhatsappGroup.objects.all()
-
+    page_size_query_param = 'page_size'
     # If we want the 'Retrieve Model' to provide us details with another
     # field (instead of the default id field), we can change this var.
     # lookup_field = 'name'
@@ -37,6 +37,12 @@ class WhatsappGroupViewSet(viewsets.ModelViewSet):
 
         # Remove duplicates
         return queryset.distinct()
+
+#         @property
+# def data(self):
+#     data = super().data
+#     data['phone_numbers'].sort(key=lambda p: p['id'])
+#     return data
 
 
 class TagViewSet(viewsets.GenericViewSet,
