@@ -3,6 +3,7 @@ from rest_framework.pagination import PageNumberPagination
 
 from core.models import WhatsappGroup, Tag
 from main import serializers
+from rest_framework import pagination
 
 
 class WhatsappGroupViewSet(viewsets.ModelViewSet):
@@ -38,11 +39,6 @@ class WhatsappGroupViewSet(viewsets.ModelViewSet):
         # Remove duplicates
         return queryset.distinct()
 
-#         @property
-# def data(self):
-#     data = super().data
-#     data['phone_numbers'].sort(key=lambda p: p['id'])
-#     return data
 
 
 class TagViewSet(viewsets.GenericViewSet,
@@ -51,3 +47,4 @@ class TagViewSet(viewsets.GenericViewSet,
 
     serializer_class = serializers.TagSerializer
     queryset = Tag.objects.all()
+    pagination.PageNumberPagination.page_size = 10
